@@ -1,0 +1,10 @@
+export const GET_ALL_POST = "GET_ALL_POST";
+export const GET_ALL_SPECIALITES = "GET_ALL_SPECIALITES";
+export const GET_ALL_COURSES = "GET_ALL_COURSES";
+export const GET_ALL_TEACHERS = "GET_ALL_TEACHERS";
+
+export const GET_POST = "GET_POST";
+export const GET_FRAGMENT = "GET_FRAGMENT";
+export const GET_SPECIALITES = "GET_SPECIALITES";
+export const GET_COURSES = "GET_COURSES";
+export const GET_TEACHERS = "GET_TEACHERS";
