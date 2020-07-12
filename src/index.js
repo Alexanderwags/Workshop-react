@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "styles/styles.scss";
-import App from "App";
+import App from "App.jsx";
 import { Provider } from "react-redux";
 import store from "redux/store";
+import { getAllSpecialities } from "redux/actions.Creators";
+store.dispatch(getAllSpecialities());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
