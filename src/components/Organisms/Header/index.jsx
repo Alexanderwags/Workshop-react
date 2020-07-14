@@ -1,9 +1,13 @@
 import React, { createRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect, Link } from "react-router-dom";
 
 const menu = createRef();
 const toggleMenu = () => {
   menu.current.classList.toggle("show");
+};
+const removeToken = () => {
+  localStorage.removeItem("token");
+  return <Redirect to="/login" />;
 };
 const Header = () => {
   return (
@@ -35,6 +39,10 @@ const Header = () => {
                 </li>
                 <li>
                   <NavLink to="/profesores">Profesores</NavLink>
+                </li>
+
+                <li>
+                  <Link onClick={() => removeToken()}>Cerrar Sesion</Link>
                 </li>
               </ul>
             </nav>

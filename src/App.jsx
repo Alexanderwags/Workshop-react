@@ -26,7 +26,7 @@ const App = () => {
           <Protected exact path="/profesores" component={Teachers} />
           <Protected path="/clase/:id" component={Fragment} />
           <Public path="/login" component={Login} />
-          <Public path="/registrer" component={Register} />
+          <Public path="/registro" component={Register} />
           <Route component={Page404} />
         </Switch>
       </Router>
