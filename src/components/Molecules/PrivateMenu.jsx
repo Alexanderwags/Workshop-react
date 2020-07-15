@@ -23,7 +23,9 @@ const PrivateMenu = () => {
       </li>
 
       <li>
-        <Link onClick={() => removeToken()}>Cerrar Sesion</Link>
+        <Link to="" onClick={() => removeToken()}>
+          Cerrar Sesion
+        </Link>
       </li>
     </ul>
   );
