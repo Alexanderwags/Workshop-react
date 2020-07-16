@@ -22,18 +22,18 @@ const Teachers = ({ match, teachers }) => {
               educacion"
       />
       {teachers && (
-        <main className="ed-grid m-grid-3 lg-grid-4">
+        <main className="ed-grid m-grid-3 lg-grid-4 row-gap">
           {teachers.map((t) => {
             return (
               <article key={t.id}>
-                <div>
-                  <div className="img-container">
+                <div className="s-px-4">
+                  <div className="img-container circle s-mb-2">
                     <img src={t.picture} alt={t.id} />
                   </div>
                 </div>
-                <div>
-                  <p className="t3">{t.name}</p>
-                  <p className="t3">{t.country}</p>
+                <div className="s-center">
+                  <p className="t3 s-mb-1">{t.name}</p>
+                  <p>{t.country}</p>
                 </div>
               </article>
             );
