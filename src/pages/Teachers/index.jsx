@@ -3,6 +3,7 @@ import Banner from "components/Organisms/Banner/index";
 import { getAllTeachers } from "redux/actions.Creators";
 import store from "redux/store";
 import { connect } from "react-redux";
+import Teacher from "components/Organisms/Teacher";
 
 const Teachers = ({ match, teachers }) => {
   useEffect(() => {
@@ -24,19 +25,7 @@ const Teachers = ({ match, teachers }) => {
       {teachers && (
         <main className="ed-grid m-grid-3 lg-grid-4 row-gap">
           {teachers.map((t) => {
-            return (
-              <article key={t.id}>
-                <div className="s-px-4">
-                  <div className="img-container circle s-mb-2">
-                    <img src={t.picture} alt={t.id} />
-                  </div>
-                </div>
-                <div className="s-center">
-                  <p className="t3 s-mb-1">{t.name}</p>
-                  <p>{t.country}</p>
-                </div>
-              </article>
-            );
+            return <Teacher key={t.id} {...t} />;
           })}
         </main>
       )}

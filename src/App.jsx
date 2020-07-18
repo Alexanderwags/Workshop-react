@@ -12,6 +12,7 @@ import Login from "./pages/Login/index.js";
 import Register from "./pages/Register";
 import Page404 from "pages/404";
 import Header from "components/Organisms/Header";
+import Courses from "pages/Courses";
 const App = () => {
   return (
     <>
@@ -21,7 +22,7 @@ const App = () => {
           <Protected exact path="/" component={Home} />
           <Protected exact path="/especialidades" component={Specialities} />
           <Protected path="/especialidades/:id" component={Specialitie} />
-          <Protected exact path="/cursos" component={Specialities} />
+          <Protected exact path="/cursos" component={Courses} />
           <Protected path="/cursos/:id" component={Course} />
           <Protected exact path="/profesores" component={Teachers} />
           <Protected path="/clase/:id" component={Fragment} />

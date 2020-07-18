@@ -6,6 +6,7 @@ import {
   fragmentReducer,
   specialityReducer,
   teacherReducer,
+  courseReducer,
 } from "./reducers";
 
 export default createStore(
@@ -14,6 +15,7 @@ export default createStore(
     specialityReducer,
     teacherReducer,
     fragmentReducer,
+    courseReducer,
   }),
   composeWithDevTools(applyMiddleware(thunk))
 );
